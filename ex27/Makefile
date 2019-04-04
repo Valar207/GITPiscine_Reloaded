@@ -5,33 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vrossi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/04/03 09:55:57 by vrossi            #+#    #+#              #
-#    Updated: 2019/04/04 16:17:47 by vrossi           ###   ########.fr        #
+#    Created: 2019/04/04 11:36:59 by vrossi            #+#    #+#              #
+#    Updated: 2019/04/04 16:21:13 by vrossi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-SRC = ./srcs/
+NAME = ft_display_file
+CC = gcc
 FLAGS = -Wall -Wextra -Werror
-FILES = $(SRC)ft_putchar.c \
-		$(SRC)ft_putstr.c \
-		$(SRC)ft_strcmp.c \
-		$(SRC)ft_strlen.c \
-		$(SRC)ft_swap.c
-OBJ = ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
-HEADERS = ./includes/
+FILES = ft_display_file.c ft_putchar.c ft_putstr.c
+OBJ = ft_display_file.o ft_putchar.o ft_putstr.o
+HEADER = lib.h
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) -c $(FILES) -I $(HEADERS)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	$(CC) $(FLAGS) -c $(FILES) -I $(HEADER)
+	$(CC) -o $(NAME) $(OBJ)
 
 clean:
-	/bin/rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

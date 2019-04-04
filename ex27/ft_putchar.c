@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vrossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 10:42:22 by vrossi            #+#    #+#             */
-/*   Updated: 2019/04/03 15:33:13 by vrossi           ###   ########.fr       */
+/*   Created: 2019/04/04 16:04:51 by vrossi            #+#    #+#             */
+/*   Updated: 2019/04/04 16:05:58 by vrossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include <unistd.h>
+#include "lib.h"
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
 {
-	int		i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	write(1, &c, 1);
 }

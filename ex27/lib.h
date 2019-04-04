@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   lib.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vrossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/03 15:38:39 by vrossi            #+#    #+#             */
-/*   Updated: 2019/04/03 15:39:34 by vrossi           ###   ########.fr       */
+/*   Created: 2019/04/04 16:25:52 by vrossi            #+#    #+#             */
+/*   Updated: 2019/04/04 16:25:55 by vrossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef LIB_H
+# define LIB_H
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
+void	ft_putstr(char *str);
+
+#endif

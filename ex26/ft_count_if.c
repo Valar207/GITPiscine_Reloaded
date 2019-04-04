@@ -6,7 +6,7 @@
 /*   By: vrossi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 18:27:16 by vrossi            #+#    #+#             */
-/*   Updated: 2019/04/03 19:21:35 by vrossi           ###   ########.fr       */
+/*   Updated: 2019/04/04 11:24:59 by vrossi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,4 @@ int		ft_count_if(char **tab, int (*f)(char*))
 		i++;
 	}
 	return (count);
-}
-
-int main()
-{
-	char	tab[] = {'1', '4', 'l', 'p', 0};
-	ft_count_if();
-	return 0;
 }
